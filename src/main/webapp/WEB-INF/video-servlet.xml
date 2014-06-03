@@ -59,6 +59,9 @@
     </bean>
 
     <bean id="movieDao" class="com.recruit.video.dao.MovieDaoImpl"></bean>
+    <bean id="customerDao" class="com.recruit.video.dao.CustomerDaoImpl"></bean>
+    <bean id="rentalDao" class="com.recruit.video.dao.RentalDaoImpl"></bean>
+    <bean id="staffDao" class="com.recruit.video.dao.StaffDaoImpl"></bean>
     <bean id="rentalService" class="com.recruit.video.service.RentalServiceImpl"></bean>
 
     <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">

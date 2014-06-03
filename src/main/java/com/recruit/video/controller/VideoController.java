@@ -16,12 +16,6 @@ public class VideoController {
 	@Autowired
 	private RentalService rentalService;
 	
-	
-	@RequestMapping(value = "/rent/{movieId}", method = RequestMethod.GET) 
-	public String elo() {
-		return null;
-	}
-	
 	@RequestMapping(value = "/movies", method = RequestMethod.GET) 
 	public String getMovies(Model model) {
         List<Movie> movies = rentalService.getAllMovies();

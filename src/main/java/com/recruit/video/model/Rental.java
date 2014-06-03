@@ -39,7 +39,7 @@ public class Rental {
 	@JoinColumn(name = "staff_id")
 	private Staff staff;
 
-	@Column(name = "lastUpdate")
+	@Column(name = "last_update")
 	private Date lastUpdate;
 
 	public Integer getId() {
