@@ -32,4 +32,8 @@ public class RentalServiceImpl implements RentalService{
         return rentalDao.findById(rentalId);
     }
 
+    @Override
+    public Rental getRental(int rentalId) {
+        return rentalDao.findById(rentalId);
+    }
 }

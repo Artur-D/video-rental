@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * Created on 03.06.14.
@@ -23,14 +24,15 @@ public class RentalController {
         final int customerId = 2;
         Rental rental = rentalService.rentMovie(movieId, customerId, getStaffId());
         model.addAttribute("rental", rental);
-        return "success";
+        return "rental";
 
     }
 
-    @RequestMapping(value = "/rental/{rentalId}")
-    public String getRental(@PathVariable("rentalId") Integer rentalId) {
-
-        return null;
+    @RequestMapping(value = "/rental/{rentalId}", method = RequestMethod.GET)
+    public String getRental(@PathVariable("rentalId") Integer rentalId, Model model) {
+        Rental rental = rentalService.getRental(rentalId);
+        model.addAttribute("rental", rental);
+        return "rental";
     }
 
     private int getStaffId() {

@@ -8,4 +8,5 @@ import java.util.List;
 public interface RentalService {
     public List<Movie> getAllMovies();
     public Rental rentMovie(int movieId, int customerId, int staffId);
+    public Rental getRental(int rentalId);
 }
